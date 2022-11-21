@@ -41,11 +41,10 @@ class BirdsController < ApplicationController
       render json: { error: "Bird not found" }, status: :not_found
     end
   end
-  
+
   private
 
   def bird_params
     params.permit(:name, :species, :likes)
   end
-
 end
